@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${spring.eurekaurl}
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+
+server:
+  port: 9999  #服务端口号
+spring:
+  application:
+    name: service-zuul #服务名称--调用的时候根据名称来调用该服务的方法
+  eurekaurl: http://127.0.0.1:9101/eureka/
+
+zuul:
+  routes:
+    service-consumer:
+      path: /api/service-consumer/v1/**

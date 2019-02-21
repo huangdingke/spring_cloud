@@ -1,0 +1,14 @@
+server:
+  port: 9101 #服务注册中心端口号
+#  port2: 9001 #服务注册中心端口号
+eureka:
+  instance:
+    preferIpAddress: false
+    hostname: service-center-1 #服务注册中心IP地址
+#    hostname2: service-center-2 #服务注册中心IP地址
+  client:
+    registerWithEureka: false #是否向服务注册中心注册自己
+    fetchRegistry: false #是否检索服务
+    serviceUrl: #服务注册中心的配置内容，指定服务注册中心的位置
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname2}:${server.port2}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
