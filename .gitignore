@@ -12,7 +12,7 @@
 *.zip
 *.tar.gz
 *.rar
-
+.mvn*
 
 target/
 .git
@@ -28,6 +28,8 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+eureka/.mvn
+mvnw*
 *.iws
 *.iml
 *.ipr
